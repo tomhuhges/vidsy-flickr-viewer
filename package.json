@@ -1,13 +1,13 @@
 {
   "name": "vidsy-flickr-viewer",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "vidsy flickr viewer",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "test": "test",
     "start": "webpack-dev-server"
   },
-  "author": "",
+  "author": "tom hughes",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.21.0",
