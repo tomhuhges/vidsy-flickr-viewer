@@ -14,7 +14,7 @@ const paths = {
 
 const defaults = {
   entry: {
-    app: paths.src,
+    app: `${paths.src}/index.jsx`,
     style: `${paths.css}/style.css`,
   },
   output: {
