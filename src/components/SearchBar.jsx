@@ -9,10 +9,11 @@ class SearchBar extends React.Component {
           className="search"
           ref={(c) => { this.search = c; }}
           placeholder="Search Flickr"
+          onKeyUp={this.props.handleSearch}
         />
         <button
           className="btn"
-          onClick={this.props.handleClick}
+          onClick={this.props.handleSearch}
         >Go</button>
       </div>
     );
@@ -20,7 +21,7 @@ class SearchBar extends React.Component {
 }
 
 SearchBar.propTypes = {
-  handleClick: React.PropTypes.func.isRequired,
+  handleSearch: React.PropTypes.func.isRequired,
 };
 
 export default SearchBar;

@@ -10,9 +10,9 @@ class App extends React.Component {
     this.state = {
       images: [],
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
-  handleClick() {
+  handleSearch() {
     const searchTerm = this.searchBar.search.value;
     const url = getRequestUrl(searchTerm);
     fetch(url)
@@ -29,7 +29,7 @@ class App extends React.Component {
       <div className="container">
         <SearchBar
           ref={(c) => { this.searchBar = c; }}
-          handleClick={this.handleClick}
+          handleSearch={this.handleSearch}
         />
         <Gallery images={this.state.images} />
       </div>
