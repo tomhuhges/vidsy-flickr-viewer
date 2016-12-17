@@ -14,7 +14,7 @@ const paths = {
 
 const defaults = {
   entry: {
-    app: `${paths.src}/index.jsx`,
+    app: paths.src,
     style: `${paths.css}/style.css`,
   },
   output: {
@@ -39,6 +39,9 @@ const defaults = {
         },
       },
     ],
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   },
   plugins: [
     new HtmlWebpackPlugin({
