@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import SearchBar from './components/SearchBar';
-import Images from './components/Images';
+import Gallery from './components/Gallery';
 import { getRequestUrl } from './libs/api';
 
 class App extends React.Component {
@@ -31,7 +31,7 @@ class App extends React.Component {
           ref={(c) => { this.searchBar = c; }}
           handleClick={this.handleClick}
         />
-        <Images images={this.state.images} />
+        <Gallery images={this.state.images} />
       </div>
     );
   }
