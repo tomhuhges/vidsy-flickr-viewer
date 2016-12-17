@@ -18,7 +18,7 @@ class App extends React.Component {
     fetch(url)
       .then(response => response.json())
       .then((data) => {
-        this.setState({ ...data.photos.photo });
+        this.setState({ images: data.photos.photo });
       })
       .catch((error) => {
         throw error;
