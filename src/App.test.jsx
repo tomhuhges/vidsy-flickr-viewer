@@ -1,17 +1,17 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import App from './';
+import App from './App';
 
 test('App renders a SearchBar', () => {
   const wrapper = mount(
     <App />,
   );
-  expect(wrapper.find('SearchBar')).to.have.length(1);
+  expect(wrapper.find('SearchBar')).length === 1;
 });
 
 test('App renders a Gallery', () => {
   const wrapper = mount(
     <App />,
   );
-  expect(wrapper.find('Gallery')).to.have.length(1);
+  expect(wrapper.find('Gallery')).length === 1;
 });
