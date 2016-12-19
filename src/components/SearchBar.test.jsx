@@ -1,26 +1,26 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import SearchBar from './SearchBar';
 
-test('SearchBar renders an input', () => {
-  const wrapper = mount(
+test('SearchBar renders an input with className of `search`', () => {
+  const wrapper = shallow(
     <SearchBar />,
   );
-  const input = wrapper.find('input');
+  const input = wrapper.find('.search');
   expect(input.is('input')).toBe(true);
 });
 
-test('SearchBar renders a button', () => {
-  const wrapper = mount(
+test('SearchBar renders a button with className of `btn`', () => {
+  const wrapper = shallow(
     <SearchBar />,
   );
-  const button = wrapper.find('button');
+  const button = wrapper.find('.btn');
   expect(button.is('button')).toBe(true);
 });
 
 test('SearchBar input runs handleSearch on keyup', () => {
   const handleSearch = jest.fn();
-  const wrapper = mount(
+  const wrapper = shallow(
     <SearchBar handleSearch={handleSearch} />,
   );
   wrapper.find('input').simulate('keyup');
@@ -29,7 +29,7 @@ test('SearchBar input runs handleSearch on keyup', () => {
 
 test('SearchBar input runs handleSearch on click', () => {
   const handleSearch = jest.fn();
-  const wrapper = mount(
+  const wrapper = shallow(
     <SearchBar handleSearch={handleSearch} />,
   );
   wrapper.find('button').simulate('click');
