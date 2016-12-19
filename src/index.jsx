@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import SearchBar from './components/SearchBar';
 import Gallery from './components/Gallery';
-import { getRequestUrl } from './libs/api';
+import { API_KEY, getRequestUrl } from './libs/api';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class App extends React.Component {
   }
   handleSearch() {
     const searchTerm = this.searchBar.search.value;
-    const url = getRequestUrl(searchTerm);
+    const url = getRequestUrl(searchTerm, API_KEY);
     fetch(url)
       .then(response => response.json())
       .then((data) => {

@@ -4,7 +4,11 @@ import { getImageUrl } from '../libs/api';
 const Gallery = ({ images }) => (
   <div className="images">
     {images.map(image =>
-      <img key={image.id} src={getImageUrl(image)} alt={image.title} />,
+      <div
+        key={image.id}
+        style={{ backgroundImage: `url(${getImageUrl(image)})` }}
+        className="img"
+      />,
     )}
   </div>
 );
