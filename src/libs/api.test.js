@@ -14,14 +14,14 @@ test('getRequestUrl returns a valid URL string', () => {
 test('getImageUrl returns a valid URL string', () => {
   const startImage = {
     farm: 1,
-    id: 1,
-    secret: 1,
-    server: 1,
+    id: '1',
+    secret: '1',
+    server: '1',
   };
 
   const finUrl = getImageUrl(startImage);
 
   expect(finUrl).toBe(
-    'https://farm1.staticflickr.com/1/1_1.jpg',
+    'https://farm1.staticflickr.com/1/1_1_b.jpg',
   );
 });
