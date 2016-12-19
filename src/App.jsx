@@ -1,4 +1,6 @@
 import React from 'react';
+import DocumentHead from 'react-helmet';
+import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import Gallery from './components/Gallery';
 import { API_KEY, getRequestUrl } from './libs/api';
@@ -42,6 +44,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
+        <DocumentHead
+          link={[
+            {
+              rel: 'stylesheet',
+              href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900',
+            },
+          ]}
+        />
+        <Header />
         <SearchBar
           ref={(c) => { this.searchBar = c; }}
           handleSearch={this.handleSearch}
