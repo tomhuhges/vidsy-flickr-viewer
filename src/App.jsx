@@ -3,7 +3,15 @@ import SearchBar from './components/SearchBar';
 import Gallery from './components/Gallery';
 import { API_KEY, getRequestUrl } from './libs/api';
 
+/**
+ * App component
+ * This is the top level component
+ */
 class App extends React.Component {
+  /**
+   * constructor
+   * @param {object} props
+   */
   constructor(props) {
     super(props);
     this.state = {
@@ -11,6 +19,10 @@ class App extends React.Component {
     };
     this.handleSearch = this.handleSearch.bind(this);
   }
+  /**
+  * Make API call to Flickr
+  * @returns {Promise<Response>}
+  */
   handleSearch() {
     const searchTerm = this.searchBar.search.value;
     const url = getRequestUrl(searchTerm, API_KEY);
@@ -23,6 +35,10 @@ class App extends React.Component {
         throw error;
       });
   }
+  /**
+  * Render the component
+  * @returns {ReactElement} markup
+  */
   render() {
     return (
       <div className="container">

@@ -1,6 +1,13 @@
 import React from 'react';
 
+/**
+ * SearchBar component
+ */
 class SearchBar extends React.Component {
+  /**
+  * Render the component
+  * @returns {ReactElement} markup
+  */
   render() {
     return (
       <div className="searchbar">
@@ -20,6 +27,10 @@ class SearchBar extends React.Component {
   }
 }
 
+/**
+ * propTypes
+ * @property {func} handleSearch function
+ */
 SearchBar.propTypes = {
   handleSearch: React.PropTypes.func.isRequired,
 };
