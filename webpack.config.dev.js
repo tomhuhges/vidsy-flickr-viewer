@@ -24,7 +24,7 @@ export default function dev(options) {
           include: options.paths.css,
         },
         {
-          test: /\.(jpe?g|png|gif)$/i,
+          test: /\.(jpe?g|png|gif)$/,
           loader: 'file?name=[path][name].[hash].[ext]',
           include: options.paths.images,
         },

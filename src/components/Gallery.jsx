@@ -23,7 +23,14 @@ const Gallery = ({ images }) => (
  * @property {array} array of image objects
  */
 Gallery.propTypes = {
-  images: React.PropTypes.array.isRequired,
+  images: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      farm: React.PropTypes.number.isRequired,
+      id: React.PropTypes.string.isRequired,
+      secret: React.PropTypes.string.isRequired,
+      server: React.PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 export default Gallery;

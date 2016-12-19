@@ -23,19 +23,19 @@ const defaults = {
   module: {
     preLoaders: [
       {
-        test: /\\.jsx?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
       },
     ],
     loaders: [
       {
-        test: /\\.jsx?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         include: paths.src,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015'],
+          presets: ['airbnb'],
         },
       },
     ],
