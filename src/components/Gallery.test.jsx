@@ -5,9 +5,9 @@ import Gallery from './Gallery';
 test('Gallery renders a div with className of `img`', () => {
   const images = [{
     farm: 1,
-    id: 1,
-    secret: 1,
-    server: 1,
+    id: '1',
+    secret: '1',
+    server: '1',
   }];
   const wrapper = shallow(
     <Gallery images={images} />,
@@ -19,15 +19,15 @@ test('Gallery renders a div with className of `img`', () => {
 test('Gallery renders one div for each object of the images array', () => {
   const images = [{
     farm: 1,
-    id: 1,
-    secret: 1,
-    server: 1,
+    id: '1',
+    secret: '1',
+    server: '1',
   },
   {
     farm: 1,
-    id: 1,
-    secret: 1,
-    server: 1,
+    id: '1',
+    secret: '1',
+    server: '1',
   }];
   const wrapper = shallow(
     <Gallery images={images} />,
